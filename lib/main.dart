@@ -16,15 +16,11 @@ void main() {
 }
 
 void test() {
-  const name = 'Foo';
+  const age = 20;
 
-  if (name == 'Foo') {
-    print('Yes this is foo');
-  } else if (name != "Bar") {
-    print('Not Foo');
-  } else {
-    print("Nothing");
-  }
+  final halfOfAge = age / 2;
+
+  print('Haf of $age is: $halfOfAge');
 }
 
 class MyApp extends StatelessWidget {
