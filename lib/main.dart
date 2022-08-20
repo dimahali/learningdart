@@ -15,7 +15,10 @@ void main() {
 }
 
 void test() {
-  const person = {'age': 20};
+  const String? firstName = null;
+  const String? middleName = 'Bar';
+  const String? lastName = 'Baz';
+  const firstNonNullValue = firstName ?? middleName ?? lastName;
 }
 
 class MyApp extends StatelessWidget {
@@ -24,9 +27,6 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    print(getFullName('Hamid', 'Ali'));
-    print(getFullNameOneLine('Ali', 'Hamid'));
-
     test();
 
     return MaterialApp(
