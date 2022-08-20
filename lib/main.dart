@@ -15,6 +15,16 @@ void main() {
   runApp(const MyApp());
 }
 
+void test() {
+  final name = 'Foo';
+
+  if (name == 'Foo') {
+    print('Yes this is foo');
+  } else {
+    print('Not Foo');
+  }
+}
+
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
@@ -23,6 +33,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     print(getFullName('Hamid', 'Ali'));
     print(getFullNameOneLine('Ali', 'Hamid'));
+
+    test();
 
     return MaterialApp(
       title: 'Flutter Demo',
