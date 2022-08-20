@@ -16,12 +16,14 @@ void main() {
 }
 
 void test() {
-  final name = 'Foo';
+  const name = 'Foo';
 
   if (name == 'Foo') {
     print('Yes this is foo');
-  } else {
+  } else if (name != "Bar") {
     print('Not Foo');
+  } else {
+    print("Nothing");
   }
 }
 
