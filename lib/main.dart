@@ -15,9 +15,7 @@ void main() {
 }
 
 void test() {
-  var setOfStrings = {'foo', 'bar', 'baz'};
-
-  setOfStrings.add('foo'); //this will throw error as it is not unique
+  const person = {'age': 20};
 }
 
 class MyApp extends StatelessWidget {
