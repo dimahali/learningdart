@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
 
 String getFullName(String firstName, String lastName) {
@@ -9,18 +11,12 @@ String getFullNameOneLine(String firstName, String lastName) =>
     '$firstName $lastName';
 
 void main() {
-  var name = "Hamid";
-  name = "Ali";
-
   runApp(const MyApp());
 }
 
 void test() {
-  const age = 20;
-
-  final halfOfAge = age / 2;
-
-  print('Haf of $age is: $halfOfAge');
+  const items = ['foo', 'bar', 'baz'];
+  print(items[1]);
 }
 
 class MyApp extends StatelessWidget {
