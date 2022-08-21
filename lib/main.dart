@@ -14,29 +14,18 @@ void main() {
   runApp(const MyApp());
 }
 
-class Person {
-  final String name;
-
-  Person(this.name);
-
-  void printName() {
-    print(name);
-  }
-
-  void run() {
-    print('running');
-  }
-
+class LivingThing {
   void breathe() {
-    print('breathe');
+    print('Breathing');
   }
 }
 
+class Cat extends LivingThing {}
+
 void test() {
-  final person = Person('Foo Bar');
-  person.printName();
-  person.run();
-  person.breathe();
+  final fluffers = Cat();
+
+  fluffers.breathe();
 }
 
 class MyApp extends StatelessWidget {
