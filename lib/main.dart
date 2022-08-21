@@ -14,7 +14,7 @@ void main() {
   runApp(const MyApp());
 }
 
-class LivingThing {
+abstract class LivingThing {
   void breathe() {
     print('Breathing');
   }
@@ -23,7 +23,7 @@ class LivingThing {
 class Cat extends LivingThing {}
 
 void test() {
-  final fluffers = Cat();
+  final fluffers = LivingThing();
   fluffers.breathe();
 }
 
