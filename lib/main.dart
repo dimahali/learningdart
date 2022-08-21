@@ -19,6 +19,10 @@ class Person {
 
   Person(this.name);
 
+  void printName() {
+    print(name);
+  }
+
   void run() {
     print('running');
   }
@@ -30,6 +34,7 @@ class Person {
 
 void test() {
   final person = Person('Foo Bar');
+  person.printName();
   person.run();
   person.breathe();
 }
