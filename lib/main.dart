@@ -20,7 +20,19 @@ enum PersonProperties {
   age;
 }
 
-void test() {}
+void test(PersonProperties personProperties) {
+  switch (personProperties) {
+    case PersonProperties.firstName:
+      print('First Name');
+      break;
+    case PersonProperties.lastName:
+      print('Last Name');
+      break;
+    case PersonProperties.age:
+      print("Age");
+      break;
+  }
+}
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
