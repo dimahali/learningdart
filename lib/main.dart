@@ -24,7 +24,6 @@ class Cat extends LivingThing {}
 
 void test() {
   final fluffers = Cat();
-
   fluffers.breathe();
 }
 
