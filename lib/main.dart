@@ -26,9 +26,7 @@ class Person {
 
 void test() {
   final person = Person();
-
   person.run();
-
   person.breathe();
 }
 
