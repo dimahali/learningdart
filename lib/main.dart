@@ -15,6 +15,10 @@ void main() {
 }
 
 class Person {
+  final String name;
+
+  Person(this.name);
+
   void run() {
     print('running');
   }
@@ -25,7 +29,7 @@ class Person {
 }
 
 void test() {
-  final person = Person();
+  final person = Person('Foo Bar');
   person.run();
   person.breathe();
 }
