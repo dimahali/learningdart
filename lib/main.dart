@@ -14,24 +14,22 @@ void main() {
   runApp(const MyApp());
 }
 
-enum PersonProperties {
-  firstName,
-  lastName,
-  age;
+class Person {
+  void run() {
+    print('running');
+  }
+
+  void breathe() {
+    print('breathe');
+  }
 }
 
-void test(PersonProperties personProperties) {
-  switch (personProperties) {
-    case PersonProperties.firstName:
-      print('First Name');
-      break;
-    case PersonProperties.lastName:
-      print('Last Name');
-      break;
-    case PersonProperties.age:
-      print("Age");
-      break;
-  }
+void test() {
+  final person = Person();
+
+  person.run();
+
+  person.breathe();
 }
 
 class MyApp extends StatelessWidget {
