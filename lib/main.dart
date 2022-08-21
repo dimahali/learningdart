@@ -14,12 +14,13 @@ void main() {
   runApp(const MyApp());
 }
 
-void test() {
-  const String? firstName = null;
-  const String? middleName = 'Bar';
-  const String? lastName = 'Baz';
-  const firstNonNullValue = firstName ?? middleName ?? lastName;
+enum PersonProperties {
+  firstName,
+  lastName,
+  age;
 }
+
+void test() {}
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
