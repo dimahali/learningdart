@@ -4,13 +4,18 @@ void main() {
   runApp(const MyApp());
 }
 
-Future<int> futureMultiplyByTwo(int a) {
-  return Future.delayed(const Duration(seconds: 3), () => a * 2);
+Stream<String> getName() {
+  return Stream.periodic(const Duration(seconds: 1), (value) {
+    return 'Foo';
+  });
 }
 
 void test() async {
-  final result = await futureMultiplyByTwo(20);
-  print(result);
+  await for (final value in getName()) {
+    print(value);
+  }
+
+  print('stream finished');
 }
 
 class MyApp extends StatelessWidget {
