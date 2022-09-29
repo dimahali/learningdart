@@ -1,25 +1,16 @@
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
 
 void main() {
   runApp(const MyApp());
 }
 
-class Cat {
-  final String name;
-  Cat(this.name);
+Future<int> futureMultiplyByTwo(int a) {
+  return Future.delayed(const Duration(seconds: 3), () => a * 2);
 }
 
-extension Run on Cat {
-  void run() {
-    print('Cat $name is running');
-  }
-}
-
-void test() {
-  final cat = Cat('Foo');
-  cat.run();
+void test() async {
+  final result = await futureMultiplyByTwo(20);
+  print(result);
 }
 
 class MyApp extends StatelessWidget {
