@@ -4,16 +4,15 @@ void main() {
   runApp(const MyApp());
 }
 
-Iterable<int> getOneTwoThree() sync* {
-  yield 1;
-  yield 2;
-  yield 3;
+class Pair<A, B> {
+  final A value1;
+  final B value2;
+
+  Pair(this.value1, this.value2);
 }
 
 void test() async {
-  for (final value in getOneTwoThree()) {
-    print(value);
-  }
+  final names = Pair("Foo", 20);
 }
 
 class MyApp extends StatelessWidget {
