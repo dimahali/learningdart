@@ -14,21 +14,26 @@ void main() {
   runApp(const MyApp());
 }
 
-abstract class LivingThing {
-  void breathe() {
-    print('Breathing');
-  }
-}
-
-class Cat extends LivingThing {
+class Cat {
   final String name;
+
   Cat(this.name);
-  factory Cat.fluffBall(): name = 'Fluff Ball';
+
+  @override
+  bool operator ==(covariant Cat other) => other.name == name;
+
+  @override
+  int get hashCode => name.hashCode;
 }
 
 void test() {
-  final fluffers = Cat();
-  fluffers.breathe();
+  final cat1 = Cat('Foo');
+  final cat2 = Cat('Foo');
+  if (cat1 == cat2) {
+    print('They are equal');
+  } else {
+    print('they are not equal');
+  }
 }
 
 class MyApp extends StatelessWidget {
