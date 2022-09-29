@@ -2,38 +2,24 @@ import 'dart:ffi';
 
 import 'package:flutter/material.dart';
 
-String getFullName(String firstName, String lastName) {
-  //return "$firstName $lastName";
-  return '$firstName $lastName';
-}
-
-String getFullNameOneLine(String firstName, String lastName) =>
-    '$firstName $lastName';
-
 void main() {
   runApp(const MyApp());
 }
 
 class Cat {
   final String name;
-
   Cat(this.name);
+}
 
-  @override
-  bool operator ==(covariant Cat other) => other.name == name;
-
-  @override
-  int get hashCode => name.hashCode;
+extension Run on Cat {
+  void run() {
+    print('Cat $name is running');
+  }
 }
 
 void test() {
-  final cat1 = Cat('Foo');
-  final cat2 = Cat('Foo');
-  if (cat1 == cat2) {
-    print('They are equal');
-  } else {
-    print('they are not equal');
-  }
+  final cat = Cat('Foo');
+  cat.run();
 }
 
 class MyApp extends StatelessWidget {
