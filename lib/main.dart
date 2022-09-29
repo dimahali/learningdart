@@ -20,10 +20,14 @@ abstract class LivingThing {
   }
 }
 
-class Cat extends LivingThing {}
+class Cat extends LivingThing {
+  final String name;
+  Cat(this.name);
+  factory Cat.fluffBall(): name = 'Fluff Ball';
+}
 
 void test() {
-  final fluffers = LivingThing();
+  final fluffers = Cat();
   fluffers.breathe();
 }
 
